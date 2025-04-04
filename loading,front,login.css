@@ -1,0 +1,154 @@
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a23, #1b1b3a);
+            color: white;
+            overflow-x: hidden;
+        }
+        .loading-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #0a0a23, #1b1b3a);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            animation: zoomOut 2s forwards;
+        }
+        .logo {
+            font-size: 4rem;
+            color: #ff1493;
+            text-transform: uppercase;
+            position: absolute;
+            animation: moveToHeader 2s forwards 2s;
+        }
+        @keyframes zoomOut {
+            0% { transform: scale(2); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes moveToHeader {
+            0% { top: 50%; transform: translateY(0); }
+            100% { top: 0; transform: translateY(0px); font-size: 2rem; }
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transform: translateY(-100%);
+            animation: slideDown 1.5s forwards 3s;
+        }
+        @keyframes slideDown {
+            100% { transform: translateY(0); }
+        }
+        .navdiv {
+            align-items: end;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .banner {
+            height: 300px;
+            background: url('banner.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        .fade-out {
+            opacity: 0;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 20px;
+            flex-direction: column;
+        }
+        .content {
+            display: flex;
+            width: 80%;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .left {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        .box {
+            width: 80%;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+        }
+        .box1 { animation: slideInLeft 1s forwards ease-in-out; }
+        .box2 { animation: slideInTop 1s forwards ease-in-out 0.5s; }
+        .box3 { animation: slideInBottom 1s forwards ease-in-out 1s; }
+        @keyframes slideInLeft {
+            from { transform: translateX(-120px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideInTop {
+            from { transform: translateY(-120px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideInBottom {
+            from { transform: translateY(120px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .right {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-panel {
+            width: 300px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            text-align: center;
+            border-radius: 10px;
+            opacity: 0;
+            animation: zoomIn 1.5s forwards ease-in-out 1.5s;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 50px;
+        }
+        @media (max-width: 768px) {
+            .content { flex-direction: column; }
+            .left, .right { width: 100%; }
+            .box { width: 100%; height: 80px; }
+            .login-panel { width: 80%; }
+        }
+    </style>
