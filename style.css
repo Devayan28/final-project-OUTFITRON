@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg, #0a0a23, #1b1b3a);
+
+}
+
+.nav-menu {
+  list-style: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 10px;
+  background: linear-gradient(135deg, #050552, #092450);
+}
+
+.navmenu ul li a {
+  text-decoration: none;
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #d41fa4;
+  font-family: 'Cinzel Decorative';
+  background: linear-gradient(135deg, #0a0a23, #1b1b3a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.8s ease-in-out;
+}
+
+#loading-logo {
+  white-space: nowrap;
+  font-size: 20rem;
+  overflow: visible;
+  position: absolute;
+  transition: font-size 0.5s ease, transform 0.5s ease; /* Add transition for smoothness */
+  transform-origin: center;
+}
+
+#navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel Decorative';
+
+  font-size: 3rem; /* Same initial size */
+  position: absolute; /* Initially positioned absolutely */
+  transition: font-size 0.5s ease, transform 0.5s ease, bottom 0.5s ease; /* Add transitions for all properties */
+  transform-origin: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  width: fit-content;
+  padding: 0 50px;
+}
